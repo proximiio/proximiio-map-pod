@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProximiioMap'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Proximi.io Integrated Map'
 
 # This description is used to generate tags and improve search results.
@@ -24,11 +24,11 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/proximiio/proximiio-map-pod'
   s.license          = "Commercial"
   s.author           = { 'Proximi.io' => 'support@proximi.io' }
-  s.source           = { :git => 'https://github.com/proximiio/proximiio-map-pod.git' }
+  s.source           = { :git => 'https://github.com/proximiio/proximiio-map-pod.git', :tag => s.version }
   
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'ProximiioMap/Classes/**/*'
+  #s.source_files = 'ProximiioMap/Classes/**/*'
   s.vendored_frameworks = 'Pod/ProximiioMap.framework'
   s.frameworks = 'CoreLocation', 'QuartzCore', 'Proximiio'
   s.dependency 'Proximiio'
