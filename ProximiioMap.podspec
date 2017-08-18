@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProximiioMap'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Proximi.io Integrated Map'
 
 # This description is used to generate tags and improve search results.
@@ -18,20 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Proximi.io Integrated Map
+  Proximi.io Integrated Map Solution for IOS Platform
                        DESC
 
   s.homepage         = 'https://github.com/proximiio/proximiio-map-pod'
   s.license          = "Commercial"
   s.author           = { 'Proximi.io' => 'support@proximi.io' }
-  s.source           = { :git => 'https://github.com/proximiio/proximiio-map-pod.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/proximiio/proximiio-map-pod.git' }
   
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ProximiioMap/Classes/**/*'
   s.vendored_frameworks = 'Pod/ProximiioMap.framework'
   s.frameworks = 'CoreLocation', 'QuartzCore', 'Proximiio'
-  s.dependency 'Proximiio', '~> 1.1.36'
+  s.dependency 'Proximiio'
   
   # s.resource_bundles = {
   #   'ProximiioMap' => ['ProximiioMap/Assets/*.png']
