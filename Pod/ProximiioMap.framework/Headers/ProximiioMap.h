@@ -42,6 +42,7 @@ FOUNDATION_EXPORT const unsigned char ProximiioMapVersionString[];
 - (void)setCenter:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated;
 - (void)setCenter:(CLLocationCoordinate2D)coordinate zoomLevel:(int)zoomLevel animated:(BOOL)animated;
 
+
 // Routing
 - (void)routeTo:(ProximiioLocation *)location levelFrom:(int)levelFrom levelTo:(int)levelTo;
 - (void)setRouteColor:(UIColor *)routeColor;
@@ -49,7 +50,9 @@ FOUNDATION_EXPORT const unsigned char ProximiioMapVersionString[];
 - (void)setRouteLineWidth:(float)routeLineWidth;
 
 @property (weak) id delegate;
+@property BOOL showPoi;
 @property (nonatomic, strong) UIView *view;
+@property (nonatomic, strong) NSArray *features;
 
 @end
 
