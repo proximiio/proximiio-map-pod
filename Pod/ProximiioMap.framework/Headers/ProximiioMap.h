@@ -49,10 +49,16 @@ FOUNDATION_EXPORT const unsigned char ProximiioMapVersionString[];
 - (void)setRouteColorAlpha:(float)routeAlpha;
 - (void)setRouteLineWidth:(float)routeLineWidth;
 
+// Data Access
+- (void)addPOI:(NSString *)identifier title:(NSString *)title description:(NSString *)desc latitude:(double)latitude longitude:(double)longitude;
+- (void)removePOI:(NSString *)identifier;
+- (NSArray *)allFeatures;
+
 @property (weak) id delegate;
 @property BOOL showPoi;
 @property (nonatomic, strong) UIView *view;
 @property (nonatomic, strong) NSArray *features;
+@property (nonatomic, strong) NSMutableArray *customFeatures;
 
 @end
 
