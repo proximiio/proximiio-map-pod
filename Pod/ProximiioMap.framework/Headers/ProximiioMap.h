@@ -42,7 +42,6 @@ FOUNDATION_EXPORT const unsigned char ProximiioMapVersionString[];
 - (void)setCenter:(CLLocationCoordinate2D)coordinate animated:(BOOL)animated;
 - (void)setCenter:(CLLocationCoordinate2D)coordinate zoomLevel:(int)zoomLevel animated:(BOOL)animated;
 
-
 // Routing
 - (void)routeTo:(ProximiioLocation *)location levelFrom:(int)levelFrom levelTo:(int)levelTo;
 - (void)setRouteColor:(UIColor *)routeColor;
