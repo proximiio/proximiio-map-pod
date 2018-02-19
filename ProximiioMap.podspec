@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProximiioMap'
-  s.version          = '0.1.5'
+  s.version          = '0.2.1'
   s.summary          = 'Proximi.io Integrated Map'
 
 # This description is used to generate tags and improve search results.
