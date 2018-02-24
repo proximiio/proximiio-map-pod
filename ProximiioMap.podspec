@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Proximi.io Integrated Map Solution for IOS Platform
+  Proximi.io Integrated Map Solution for IOS Platform 
                        DESC
 
   s.homepage         = 'https://github.com/proximiio/proximiio-map-pod'
