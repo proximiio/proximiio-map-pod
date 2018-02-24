@@ -10,15 +10,20 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ProximiioLeveledPolyline.h"
 #import "ProximiioRouteResponse.h"
+#import <Proximiio/ProximiioLocation.h>
 
 @interface ProximiioNavigation : NSObject
 
+@property (weak) id delegate;
+@property (nonatomic, getter=isActive) BOOL active;
+@property (nonatomic) double routeEndDistance;
+
 - (id)initWithToken:(NSString *)token;
-- (void)setCurrentLocation:(CLLocation *)location;
+- (void)setCurrentLocation:(ProximiioLocation *)location;
 - (void)setCurrentLevel:(int)level;
-- (void)setTargetLocation:(CLLocation *)location;
+- (void)setTargetLocation:(ProximiioLocation *)location;
 - (void)setTargetLevel:(int)level;
-- (void)update:(void(^)(ProximiioRouteResponse *))onComplete;
+- (void)update;
 - (CLLocation *)targetLocation;
 - (int)targetLevel;
 
@@ -29,4 +34,8 @@
 - (void)didUpdateInstructions:(NSArray *)instructions;
 - (void)didUpdateRoutingLine:(ProximiioLeveledPolyline *)polyline;
 
+- (void)navigationDidReceiveResponse:(ProximiioRouteResponse *)response;
+- (void)navigationDidFinish;
+
 @end
+

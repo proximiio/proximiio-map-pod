@@ -107,6 +107,8 @@ typedef enum {
 @property (nonatomic) double directionsAudioGuideMinimumDelay;
 @property (nonatomic) double directionsAudioGuideMinimumDistanceTravelled;
 
+@property (nonatomic) double routeEndDistance;
+
 @property (nonatomic, strong) UIView *view;
 @property (nonatomic, strong) NSArray *features;
 @property (nonatomic, strong) NSArray *amenities;
@@ -138,5 +140,9 @@ typedef enum {
 - (void)map:(ProximiioMap *)map didTapFeatures:(NSArray *)features;
 
 - (void)didTapFeatures:(NSArray *)features; // obsolete
+
+// routing
+- (void)directionsRouteFinished;
+
 
 @end
