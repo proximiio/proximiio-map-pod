@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProximiioMap'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'Proximi.io Integrated Map'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  Proximi.io Integrated Map Solution for IOS Platform 
+  Proximi.io Integrated Map Solution for IOS Platform
                        DESC
 
   s.homepage         = 'https://github.com/proximiio/proximiio-map-pod'
