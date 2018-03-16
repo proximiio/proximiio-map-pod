@@ -122,6 +122,9 @@ typedef enum {
 
 @property (nonatomic, strong) ProximiioLayerManager *layerManager;
 
+@property (nonatomic) CLLocationCoordinate2D defaultPosition;
+@property (nonatomic) double defaultZoomLevel;
+
 @property (weak) id delegate;
 
 @end
