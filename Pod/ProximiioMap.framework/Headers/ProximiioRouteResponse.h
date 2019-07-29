@@ -10,10 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ProximiioLeveledPolyline.h"
 #import "GeoJSONFeature.h"
+#import <Proximiio/ProximiioLocation.h>
 
 @interface ProximiioRouteResponse : NSObject
 
 @property (nonatomic, strong) ProximiioLeveledPolyline *leveledPolyline;
+@property (nonatomic, strong) ProximiioLocation *originalPosition;
 @property (nonatomic, strong) NSArray *steps;
 @property (nonatomic, strong) GeoJSONFeature *start;
 @property (nonatomic, strong) GeoJSONFeature *finish;

@@ -94,18 +94,24 @@ typedef enum {
 - (void)setFloor:(int)_floor alterRouting:(BOOL)alterRouting;
 - (int)floor;
 
+
+
 @property (nonatomic) BOOL showRasterFloorplans;
 @property (nonatomic) BOOL showExtrusion;
 @property (nonatomic) BOOL showPolygons;
 @property (nonatomic) BOOL showPointsOfInterest;
 @property (nonatomic) BOOL showPaths;
 @property (nonatomic) BOOL showRoutingLine;
+@property (nonatomic) BOOL showUserLocation;
 @property (nonatomic) BOOL snapToRoute;
+@property (nonatomic) double snapToRouteThreshold;
 
 @property (nonatomic) BOOL displayInstructions;
 @property (nonatomic) BOOL directionsPlayAudioGuide;
 @property (nonatomic) double directionsAudioGuideMinimumDelay;
 @property (nonatomic) double directionsAudioGuideMinimumDistanceTravelled;
+
+@property (nonatomic) double routeEndDistance;
 
 @property (nonatomic, strong) UIView *view;
 @property (nonatomic, strong) NSArray *features;
@@ -119,6 +125,9 @@ typedef enum {
 @property (nonatomic, strong) NSNumber *routeLineWidth;
 
 @property (nonatomic, strong) ProximiioLayerManager *layerManager;
+
+@property (nonatomic) CLLocationCoordinate2D defaultPosition;
+@property (nonatomic) double defaultZoomLevel;
 
 @property (weak) id delegate;
 
@@ -138,5 +147,9 @@ typedef enum {
 - (void)map:(ProximiioMap *)map didTapFeatures:(NSArray *)features;
 
 - (void)didTapFeatures:(NSArray *)features; // obsolete
+
+// routing
+- (void)directionsRouteFinished;
+
 
 @end
