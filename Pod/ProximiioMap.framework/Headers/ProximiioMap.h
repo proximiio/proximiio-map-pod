@@ -137,7 +137,7 @@ typedef enum {
 @optional
 - (void)mapDidLoad:(ProximiioMap *)map;
 - (void)mapDidChangeState:(ProximiioMap *)map;
-
+- (void)regionDidChange;
 // marker interaction
 - (BOOL)map:(ProximiioMap *)map canShowCallout:(ProximiioMarker *)marker;
 - (void)map:(ProximiioMap *)map didSelectMarker:(ProximiioMarker *)marker;
